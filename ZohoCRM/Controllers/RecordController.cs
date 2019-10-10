@@ -1,6 +1,8 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
+using System.Data.Linq;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -13,17 +15,19 @@ using ZCRMSDK.CRM.Library.Setup.RestClient;
 using ZCRMSDK.CRM.Library.Setup.Users;
 using ZCRMSDK.OAuth.Client;
 using ZCRMSDK.OAuth.Contract;
+using ZohoCRM.DB;
 
 namespace ZohoCRM.Controllers
 {
     public class RecordController : ApiController
     {
+        [HttpGet]
         // GET api/record
         public BulkAPIResponse<ZCRMRecord> Get()
         {
             ZCRMRestClient.Initialize(config);
             ZohoOAuthClient client = ZohoOAuthClient.GetInstance();
-            string grantToken = "1000.f8b6e45384893de974d11eb552ec016f.f6616a7e1091c4519cee3440c5ccb458";
+            string grantToken = "1000.7e93de15ba0d0e2fc21e4987d90d4b60.78e21d2869cc7684152da221ca24cf54";
             ZohoOAuthTokens tokens = client.GenerateAccessToken(grantToken);
             string accessToken = tokens.AccessToken;
             string refreshToken = tokens.RefreshToken;
@@ -34,18 +38,14 @@ namespace ZohoCRM.Controllers
             return response;
         }
 
-        // GET api/values/5
-        public string Get(int id)
-        {
-            return "value";
-        }
+
 
         // POST api/record
         public BulkAPIResponse<ZCRMRecord> Post()
         {
             ZCRMRestClient.Initialize(config);
             ZohoOAuthClient client = ZohoOAuthClient.GetInstance();
-            string grantToken = "1000.6e18451db3efeca854554e0c3e5e0a3f.5f6e9dbdcff49ecc3d19104195b8934c";
+            string grantToken = "1000.00f38491e3d79cb10d04604594bd7528.06959735170aeefae9668aa5de2d7bf1";
             ZohoOAuthTokens tokens = client.GenerateAccessToken(grantToken);
             string accessToken = tokens.AccessToken;
             string refreshToken = tokens.RefreshToken;

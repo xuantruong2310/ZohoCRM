@@ -13,6 +13,8 @@ using ZCRMSDK.CRM.Library.Setup.RestClient;
 using ZCRMSDK.CRM.Library.Setup.Users;
 using ZCRMSDK.OAuth.Client;
 using ZCRMSDK.OAuth.Contract;
+using ZohoCRM.DB;
+using ZohoCRM.Models;
 
 namespace ZohoCRM.Controllers
 {
@@ -40,35 +42,46 @@ namespace ZohoCRM.Controllers
         }
 
         // POST api/values
-        public APIResponse Post()
+        public List<ZCRMRecord> Post()
         {
+
             ZCRMRestClient.Initialize(config);
-            //ZohoOAuthClient client = ZohoOAuthClient.GetInstance();
-            //string grantToken = "1000.1a53da6bc16ca3564ce23b5645d8c242.e994c877fa10d62df9c2ed3024cd0b6f";
-            //ZohoOAuthTokens tokens = client.GenerateAccessToken(grantToken);
-            //string accessToken = tokens.AccessToken;
-            //string refreshToken = tokens.RefreshToken;
-            ZCRMUser user = ZCRMUser.GetInstance("Boyle", "Patricia@abc.com"); //last_name and email of the user
-            ZCRMOrganization OrgInstance = ZCRMRestClient.GetInstance().GetOrganizationInstance();
-            user.Country = "US";
-            user.Role = ZCRMRole.GetInstance(554023000000015969, "Manager");
-            user.CountryLocale = "en_US";
-            user.FirstName = "Patricia";
-            user.Profile = ZCRMProfile.GetInstance(554023000000015975, "Standard");
-            user.DateOfBirth = "1990-12-31";
-            user.DateFormat = "MM/dd/yyyy";
-            user.EmailId = "quang.tuyen@moolahsense.com";
-
-            user.SetFieldValue("FieldApiName", "FieldValue");
-            APIResponse response = OrgInstance.CreateUser(user);
-            Console.WriteLine(response.HttpStatusCode);
-            Console.WriteLine(response.Status);
-            Console.WriteLine(response.ResponseJSON);
-            Console.WriteLine(response.Message);
-            Console.WriteLine(JsonConvert.SerializeObject(response));
-            Console.WriteLine("\n\n\n");
-
-            return response;
+            ZohoOAuthClient client = ZohoOAuthClient.GetInstance();
+            string grantToken = "1000.cf4d27aa81b40efcecfd5df5a56ecc4f.dd30b2da5be895ead432837653a4d51b";
+            ZohoOAuthTokens tokens = client.GenerateAccessToken(grantToken);
+            string accessToken = tokens.AccessToken;
+            string refreshToken = tokens.RefreshToken;
+            List<ZCRMRecord> records = new List<ZCRMRecord>();
+            var dbContext = new MS_UATEntities();
+            var data = dbContext.Database.SqlQuery<IssuerModel>("select noactive.*, case when LoanStatus=8 then 'nonactive' else 'active' end as loanstatus,case when LoanRequestID is not null then ' ' end as Stage  from ( select company.BusinessName, nocompany.* from( select z.*, y.lastrepaymentdate, x.DAYS_OVERDUE, convert(decimal(18, 2), x.overdueamount) as overdueamount, w.numofoutstandingrepayment, w.numofoverduerepayment, w.numofpaidrepayment, w.totalnumofrepayment, convert(decimal(18, 2), v.outamountwithoutlf) as outamountwithoutlf, convert(decimal(18, 2), v.outamountwitlf) as outamountwithlf, convert(decimal(18, 2), v.outstandinglf) as outstandinglf, u.FinalAmount, convert(decimal(18, 2), s.paidlatefees) as paidlatefees, convert(decimal(18, 2), r.totalpaidamount) as totalpaidamount, q.accepteddate from( select loanrequestid, min(iif(paystatus = 2, duedate, null)) as overduesincedate from issuerrepayment group by LoanRequestID) as z left join( select LoanRequestID, max(date) as lastrepaymentdate from issuerrepayment right join issuerrepaymentpayment on issuerrepayment.IssuerRepID = IssuerRepaymentPayment.IssuerRepID group by LoanRequestID) as y on z.LoanRequestID = y.LoanRequestID left join( select a1.*, b1.overdueamount from( select loanrequestid, isnull(DATEDIFF(day, MIN(IIF(PAYSTATUS <> 1, DUEDATE, NULL)), GETDATE()), 0) AS DAYS_OVERDUE from issuerrepayment group by LoanRequestID) as a1 left join( Select distinct LoanRequestID, Case when paystatus = 2 then SUM(Principal - isnull(PaidPrincipal, 0) - isnull(PaidInterest, 0) + Interest + isnull(lateinterest, 0)) over(partition by loanrequestID) else 0 end as overdueamount from IssuerRepayment where PayStatus = 2 ) as b1 on a1.LoanRequestID = b1.LoanRequestID) as x on z.LoanRequestID = x.LoanRequestID left join( select t.*,isnull(numpaid.numofpaidrepayment, 0) as numofpaidrepayment, isnull(numoverdue.numofoverduerepayment, 0) as numofoverduerepayment, isnull(numoutstanding.numofoutstandingrepayment, 0) as numofoutstandingrepayment from(     select LoanRequestID, count(issuerrepid) as totalnumofrepayment    from IssuerRepayment group by LoanRequestID) as t left join( select LoanRequestID, count(issuerrepid) as numofpaidrepayment from IssuerRepayment where PayStatus = 1 group by LoanRequestID) as numpaid on t.LoanRequestID = numpaid.LoanRequestID left join( select LoanRequestID, count(issuerrepid) as numofoverduerepayment from IssuerRepayment where PayStatus = 2 group by LoanRequestID ) as numoverdue on t.LoanRequestID = numoverdue.LoanRequestID left join( select LoanRequestID, count(issuerrepid) as numofoutstandingrepayment from IssuerRepayment where PayStatus <> 1 group by LoanRequestID) as numoutstanding on t.LoanRequestID = numoutstanding.LoanRequestID) as w on z.LoanRequestID = w.LoanRequestID left join( select LoanRequestID, sum((isnull(latefees,0)-isnull(paidlatefees, 0))*(1 - isfeewaiver))as outstandinglf,sum(principal - isnull(paidprincipal, 0) + Interest - isnull(paidinterest, 0) + isnull(lateinterest, 0)) as outamountwithoutlf,sum(principal - isnull(paidprincipal, 0) + Interest - isnull(paidinterest, 0) + isnull(lateinterest, 0) + (isnull(latefees, 0) - isnull(paidlatefees, 0)) * (1 - isfeewaiver)) as outamountwitlf from IssuerRepayment where PayStatus <> 1 group by LoanRequestID) as v on z.LoanRequestID = v.LoanRequestID left join( select RequestId, FinalAmount from tbl_LoanRequests ) as u on z.LoanRequestID = u.RequestId left join( select loanrequestid, sum(isnull(paidprincipal,0)+isnull(paidinterest, 0) + isnull(paidlateinterest, 0)) as totalamountpaid from issuerrepayment group by loanrequestid) t     on z.LoanRequestID = t.LoanRequestID left join( select loanrequestid, sum(isnull(paidlatefees,0)) as paidlatefees from issuerrepayment where IsFeeWaiver = 0 group by loanrequestid) as s on z.LoanRequestID = s.LoanRequestID left join( select case when a.LoanRequestID is not null then a.LoanRequestID else b.LoanRequestID end as loanrequestid, isnull(totalpaid, 0) + isnull(totalpaida, 0) as totalpaidamount from(  select LoanRequestID, sum(amount + isnull(PaidLateInterest, 0)) as totalpaid from IssuerRepayment where paystatus = 1 group by LoanRequestID) as a full join(select LoanRequestID, sum(isnull(paidprincipal,0)+isnull(paidinterest, 0) + isnull(paidlateinterest, 0)) as totalpaida from IssuerRepayment where PayStatus <> 1 group by LoanRequestID) as b on a.loanrequestid = b.loanrequestid ) as r on z.LoanRequestID = r.loanrequestid left join( select requestid, accepteddate from tbl_loanrequests) as q on z.loanrequestid = q.requestid  ) as nocompany left join( select accountdetails.BusinessName, tbl_loanrequests.RequestId from tbl_loanrequests left join(select BusinessName, NRIC_Number, USER_ID from tbl_AccountDetails) as accountdetails on accountdetails.user_ID = tbl_loanrequests.user_ID) as company on nocompany.LoanRequestID = company.RequestId ) as noactive left join( select RequestId, LoanStatus from tbl_LoanRequests ) as active on noactive.LoanRequestID = active.RequestId  ").ToList();
+            //foreach (var rc in data)
+            //{
+            ZCRMRecord record1 = new ZCRMRecord("accounts"); //module api name
+            record1.SetFieldValue("CompanyName", "rc.CompanyName");
+            record1.SetFieldValue("FullName", "rc.FullName");
+            record1.SetFieldValue("UserName", "rc.UserName");
+            record1.SetFieldValue("MobileNumber", "rc.MobileNumber");
+            record1.SetFieldValue("IssuerAccountBalance", "rc.IssuerAccountBalance");
+            record1.SetFieldValue("OverdueDate", "rc.OverdueDate");
+            record1.SetFieldValue("TotalAmountDisbursed", "rc.TotalAmountDisbursed");
+            record1.SetFieldValue("TotalAmountOverdue", "rc.TotalAmountOverdue");
+            record1.SetFieldValue("OutstandingLateFee", "rc.OutstandingLateFee");
+            record1.SetFieldValue("OutstandingAmountNoLateFee", "rc.OutstandingAmountNoLateFee");
+            record1.SetFieldValue("OutstandingAmountWithLateFee", "rc.OutstandingAmountWithLateFee");
+            record1.SetFieldValue("LastRepaymentDate", "rc.LastRepaymentDate");
+            record1.SetFieldValue("TotalFeesPaid", "rc.TotalFeesPaid");
+            record1.SetFieldValue("TotalPrincipalPaid", "rc.TotalPrincipalPaid");
+            record1.SetFieldValue("TotalInterestPaid", "rc.TotalInterestPaid");
+            record1.SetFieldValue("TotalLateInterestPaid", " rc.TotalLateInterestPaid");
+            records.Add(record1);
+            //ZCRMModule moduleIns = ZCRMModule.GetInstance("Leads"); //module api name
+            //BulkAPIResponse<ZCRMRecord> response = moduleIns.CreateRecords(records);
+            // }
+            ZCRMModule moduleIns = ZCRMModule.GetInstance("Leads"); //module api name
+            BulkAPIResponse<ZCRMRecord> response = moduleIns.CreateRecords(records); //records - list of ZCRMRecord instances filled with required data for upsert.
+            List<ZCRMRecord> upsertedRecords = response.BulkData; //upsertedRecords - list of ZCRMRecord instance
+            List<EntityResponse> entityResponses = response.BulkEntitiesResponse; //entityResponses - list of EntityResponses instance
+            return records;
         }
 
         // PUT api/values/5
