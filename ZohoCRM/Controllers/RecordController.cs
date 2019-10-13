@@ -27,10 +27,9 @@ namespace ZohoCRM.Controllers
         {
             ZCRMRestClient.Initialize(config);
             ZohoOAuthClient client = ZohoOAuthClient.GetInstance();
-            string grantToken = "1000.7e93de15ba0d0e2fc21e4987d90d4b60.78e21d2869cc7684152da221ca24cf54";
-            ZohoOAuthTokens tokens = client.GenerateAccessToken(grantToken);
-            string accessToken = tokens.AccessToken;
-            string refreshToken = tokens.RefreshToken;
+            string refreshToken = "1000.b9482a79cac2f29c7ac3d2a254d9e5c7.0c0505d64a40d8eae4e649809ac4814c";
+            string userMailId = "nguyen.quang.tuyen@moolahsense.com";
+            ZohoOAuthTokens tokens = client.GenerateAccessTokenFromRefreshToken(refreshToken, userMailId);
             ZCRMModule moduleIns = ZCRMModule.GetInstance("Leads"); //module api name
             List<string> fields = new List<string> { "Last_Name", "Company", "Email", "id" }; //field api name
             BulkAPIResponse<ZCRMRecord> response = moduleIns.GetRecords(3372164000000087503, "Company", CommonUtil.SortOrder.asc, 1, 4, fields);// get Records with cvId, sortByField, sortOrder, startIndex, endIndex and fieldApiNamelist.
@@ -45,10 +44,9 @@ namespace ZohoCRM.Controllers
         {
             ZCRMRestClient.Initialize(config);
             ZohoOAuthClient client = ZohoOAuthClient.GetInstance();
-            string grantToken = "1000.00f38491e3d79cb10d04604594bd7528.06959735170aeefae9668aa5de2d7bf1";
-            ZohoOAuthTokens tokens = client.GenerateAccessToken(grantToken);
-            string accessToken = tokens.AccessToken;
-            string refreshToken = tokens.RefreshToken;
+            string refreshToken = "1000.b9482a79cac2f29c7ac3d2a254d9e5c7.0c0505d64a40d8eae4e649809ac4814c";
+            string userMailId = "nguyen.quang.tuyen@moolahsense.com";
+            ZohoOAuthTokens tokens = client.GenerateAccessTokenFromRefreshToken(refreshToken, userMailId);
             List<ZCRMRecord> records = new List<ZCRMRecord>();
             ZCRMRecord record1 = new ZCRMRecord("Leads"); //module api name
             record1.SetFieldValue("Company", "abc");
@@ -74,30 +72,6 @@ namespace ZohoCRM.Controllers
         {
         }
 
-        //        public static Dictionary<string, string> config = new Dictionary<string, string>()
-        //{
-        //{"client_id","1000.332AUI1NR8D5H2I1ZWNNE0YK3ATEUH"},
-        //{"client_secret","dfaa9671df3bd747d7b9cac10be1103a924a5f1143"},
-        //{"redirect_uri","https://www.google.com.vn"},
-        //{"access_type","offline"},
-        //{"persistence_handler_class","ZCRMSDK.OAuth.ClientApp.ZohoOAuthDBPersistence, ZCRMSDK"},
-        //{"oauth_tokens_file_path","{file_path}"},
-        //{"mysql_username","9a9cca_zoho"},
-        //{"mysql_password","Vbn*34295"},
-        //{"mysql_database","db_9a9cca_zoho"},
-        //{"mysql_server","MYSQL5022.site4now.net"},
-        //{"mysql_port","3306"},
-        //{"apiBaseUrl","{https://www.zohoapis.com}"},
-        //{"photoUrl","{photo_url}"},
-        //{"apiVersion","v2"},
-        //{"logFilePath","{log_file_path}" },
-        //{"timeout",""},
-        //{"minLogLevel",""},
-        //{"domainSuffix","com"},
-        //{"currentUserEmail","nguyen.quang.tuyen@moolahsense.com"}
-
-        //};
-        //    }
         public static Dictionary<string, string> config = new Dictionary<string, string>()
 {
 {"client_id","1000.332AUI1NR8D5H2I1ZWNNE0YK3ATEUH"},

@@ -1,50 +1,34 @@
-﻿using Newtonsoft.Json;
+﻿
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Web.Http;
-using ZCRMSDK.CRM.Library.Api.Response;
-using ZCRMSDK.CRM.Library.Common;
+using System.Collections.Generic;
 using ZCRMSDK.CRM.Library.CRUD;
-using ZCRMSDK.CRM.Library.Setup.MetaData;
+using ZCRMSDK.CRM.Library.Api.Response;
+using ZohoCRM.Models;
+using ZohoCRM.DB;
 using ZCRMSDK.CRM.Library.Setup.RestClient;
-using ZCRMSDK.CRM.Library.Setup.Users;
 using ZCRMSDK.OAuth.Client;
 using ZCRMSDK.OAuth.Contract;
-using ZohoCRM.DB;
-using ZohoCRM.Models;
+using ZCRMSDK.CRM.Library.Setup.Users;
 
-namespace ZohoCRM.Controllers
+namespace ZohoCRM.Services
 {
-    public class ValuesController : ApiController
+    public interface IService
     {
-        // GET api/values
-        public BulkAPIResponse<ZCRMUser> Get()
+        BulkAPIResponse<ZCRMRecord> Insert();
+        void Update();
+    }
+    public class Service : IService
+    {
+        
+        public Service()
         {
-            ZCRMRestClient.Initialize(config);
-            ZohoOAuthClient client = ZohoOAuthClient.GetInstance();
-            string grantToken = "1000.d70b76f63dd52715d41fe444a5ab6fc3.0e504d3717d8f0419429c9c7914f1ee6";
-            ZohoOAuthTokens tokens = client.GenerateAccessToken(grantToken);
-            string accessToken = tokens.AccessToken;
-            string refreshToken = tokens.RefreshToken;
-            ZCRMRestClient restClient = ZCRMRestClient.GetInstance();
-            BulkAPIResponse<ZCRMUser> response = restClient.GetOrganizationInstance().GetAllUsers();
-            List<ZCRMUser> allUsers = response.BulkData; //response - list of ZCRMUser instances
-            return response;
+           
         }
 
-        // GET api/values/5
-        public string Get(int id)
+        public BulkAPIResponse<ZCRMRecord> Insert()
         {
-            return "value";
-        }
-
-        // POST api/values
-        public BulkAPIResponse<ZCRMRecord> Post()
-        {
-
+            // hardcode
             ZCRMRestClient.Initialize(config);
             ZohoOAuthClient client = ZohoOAuthClient.GetInstance();
             string refreshToken = "1000.b9482a79cac2f29c7ac3d2a254d9e5c7.0c0505d64a40d8eae4e649809ac4814c";
@@ -79,7 +63,7 @@ namespace ZohoCRM.Controllers
                 record1.SetFieldValue("Total_Paid_Amount", 14);
                 record1.CreatedTime = DateTime.UtcNow.Ticks.ToString();
                 records.Add(record1);
-                
+
             }
             ZCRMModule moduleIns = ZCRMModule.GetInstance("accounts"); //module api name
             BulkAPIResponse<ZCRMRecord> response = moduleIns.CreateRecords(records); //records - list of ZCRMRecord instances filled with required data for upsert.
@@ -88,8 +72,7 @@ namespace ZohoCRM.Controllers
             return response;
         }
 
-        // PUT api/values/5
-        public void Put()
+        public void Update()
         {
             List<ZCRMRecord> listRecord = new List<ZCRMRecord>();
             ZCRMRecord record;
@@ -275,35 +258,7 @@ namespace ZohoCRM.Controllers
             }
         }
 
-        // DELETE api/values/5
-        public void Delete(int id)
-        {
-        }
 
-        //        public static Dictionary<string, string> config = new Dictionary<string, string>()
-        //{
-        //{"client_id","1000.332AUI1NR8D5H2I1ZWNNE0YK3ATEUH"},
-        //{"client_secret","dfaa9671df3bd747d7b9cac10be1103a924a5f1143"},
-        //{"redirect_uri","https://www.google.com.vn"},
-        //{"access_type","offline"},
-        //{"persistence_handler_class","ZCRMSDK.OAuth.ClientApp.ZohoOAuthDBPersistence, ZCRMSDK"},
-        //{"oauth_tokens_file_path","{file_path}"},
-        //{"mysql_username","9a9cca_zoho"},
-        //{"mysql_password","Vbn*34295"},
-        //{"mysql_database","db_9a9cca_zoho"},
-        //{"mysql_server","MYSQL5022.site4now.net"},
-        //{"mysql_port","3306"},
-        //{"apiBaseUrl","{https://www.zohoapis.com}"},
-        //{"photoUrl","{photo_url}"},
-        //{"apiVersion","v2"},
-        //{"logFilePath","{log_file_path}" },
-        //{"timeout",""},
-        //{"minLogLevel",""},
-        //{"domainSuffix","com"},
-        //{"currentUserEmail","nguyen.quang.tuyen@moolahsense.com"}
-
-        //};
-        //    }
         public static Dictionary<string, string> config = new Dictionary<string, string>()
 {
 {"client_id","1000.332AUI1NR8D5H2I1ZWNNE0YK3ATEUH"},
@@ -326,5 +281,7 @@ namespace ZohoCRM.Controllers
 {"domainSuffix","com"},
 {"currentUserEmail","nguyen.quang.tuyen@moolahsense.com"}
 };
+
+
     }
 }

@@ -5,9 +5,9 @@ namespace ZohoCRM.DB
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
 
-    public partial class Model112 : DbContext
+    public partial class DatabaseMS : DbContext
     {
-        public Model112()
+        public DatabaseMS()
             : base("name=db")
         {
         }
