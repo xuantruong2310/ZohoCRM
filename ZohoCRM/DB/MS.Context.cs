@@ -15,10 +15,10 @@ namespace ZohoCRM.DB
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class MS_UATEntities : DbContext
+    public partial class MS_DEVEntities : DbContext
     {
-        public MS_UATEntities()
-            : base("name=MS_UATEntities")
+        public MS_DEVEntities()
+            : base("name=MS_DEVEntities")
         {
         }
     
@@ -217,7 +217,7 @@ namespace ZohoCRM.DB
         public virtual DbSet<vw_aspnet_Users> vw_aspnet_Users { get; set; }
         public virtual DbSet<vw_aspnet_UsersInRoles> vw_aspnet_UsersInRoles { get; set; }
     
-        [DbFunction("MS_UATEntities", "GetActiveDemo")]
+        [DbFunction("MS_DEVEntities", "GetActiveDemo")]
         public virtual IQueryable<GetActiveDemo_Result> GetActiveDemo(Nullable<int> fromAge, Nullable<int> toAge)
         {
             var fromAgeParameter = fromAge.HasValue ?
@@ -228,17 +228,17 @@ namespace ZohoCRM.DB
                 new ObjectParameter("toAge", toAge) :
                 new ObjectParameter("toAge", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<GetActiveDemo_Result>("[MS_UATEntities].[GetActiveDemo](@fromAge, @toAge)", fromAgeParameter, toAgeParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<GetActiveDemo_Result>("[MS_DEVEntities].[GetActiveDemo](@fromAge, @toAge)", fromAgeParameter, toAgeParameter);
         }
     
-        [DbFunction("MS_UATEntities", "GetOverViewCampaigns")]
+        [DbFunction("MS_DEVEntities", "GetOverViewCampaigns")]
         public virtual IQueryable<GetOverViewCampaigns_Result> GetOverViewCampaigns(Nullable<int> year)
         {
             var yearParameter = year.HasValue ?
                 new ObjectParameter("year", year) :
                 new ObjectParameter("year", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<GetOverViewCampaigns_Result>("[MS_UATEntities].[GetOverViewCampaigns](@year)", yearParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<GetOverViewCampaigns_Result>("[MS_DEVEntities].[GetOverViewCampaigns](@year)", yearParameter);
         }
     
         public virtual ObjectResult<string> aspnet_AnyDataInTables(Nullable<int> tablesToCheck)

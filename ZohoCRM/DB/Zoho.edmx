@@ -4,32 +4,53 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DatabaseZohoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="DatabaseZohoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <!--Errors Found During Generation:
 warning 6013: The table/view 'DatabaseZoho.dbo.CheckID' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
         <EntityType Name="CheckID">
           <Property Name="EmailMS" Type="varchar" MaxLength="50" />
           <Property Name="IDZoho" Type="varchar" MaxLength="50" />
         </EntityType>-->
-        <!--Errors Found During Generation:
-warning 6013: The table/view 'DatabaseZoho.dbo.tbl_CheckID' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
         <EntityType Name="tbl_CheckID">
-          <Property Name="EmailMS" Type="varchar" MaxLength="50" />
-          <Property Name="IDZoho" Type="varchar" MaxLength="50" />
-        </EntityType>-->
-        <EntityContainer Name="DatabaseZohoModelStoreContainer" />
+          <Key>
+            <PropertyRef Name="EmailMS" />
+          </Key>
+          <Property Name="EmailMS" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="IDZoho" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="DatabaseZohoModelStoreContainer">
+          <EntitySet Name="tbl_CheckID" EntityType="Self.tbl_CheckID" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
       </Schema>
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DatabaseZohoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityContainer Name="ZohoEntities" annotation:LazyLoadingEnabled="true" />
+        <EntityType Name="tbl_CheckID">
+          <Key>
+            <PropertyRef Name="EmailMS" />
+          </Key>
+          <Property Name="EmailMS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IDZoho" Type="Int64" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="DatabaseZohoEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tbl_CheckID" EntityType="Self.tbl_CheckID" />
+        </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="DatabaseZohoModelStoreContainer" CdmEntityContainer="ZohoEntities" />
+        <EntityContainerMapping StorageEntityContainer="DatabaseZohoModelStoreContainer" CdmEntityContainer="DatabaseZohoEntities">
+          <EntitySetMapping Name="tbl_CheckID">
+            <EntityTypeMapping TypeName="DatabaseZohoModel.tbl_CheckID">
+              <MappingFragment StoreEntitySet="tbl_CheckID">
+                <ScalarProperty Name="EmailMS" ColumnName="EmailMS" />
+                <ScalarProperty Name="IDZoho" ColumnName="IDZoho" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
   </edmx:Runtime>

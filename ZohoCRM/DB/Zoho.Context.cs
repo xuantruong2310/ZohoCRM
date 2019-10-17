@@ -13,18 +13,18 @@ namespace ZohoCRM.DB
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ZohoEntities : DbContext
+    public partial class DatabaseZohoEntities : DbContext
     {
-        public ZohoEntities()
-            : base("name=ZohoEntities")
+        public DatabaseZohoEntities()
+            : base("name=DatabaseZohoEntities")
         {
         }
-
-        public virtual DbSet<tbl_CheckID> tbl_CheckID { get; set; }
+    
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<tbl_CheckID> tbl_CheckID { get; set; }
     }
 }

@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e1a8eac6f92647b08cbd0b4a48a1dea3" Name="Diagram1">
+        <EntityTypeShape EntityType="MS_DEVModel.AAContractInvestment" Width="1.5" PointX="9.75" PointY="94.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.AAContract" Width="1.5" PointX="7.5" PointY="94.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.AAIncompleteSignUpEmail" Width="1.5" PointX="9.75" PointY="98" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.AAInsufficientFund" Width="1.5" PointX="9.75" PointY="100.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.AAPlusCost" Width="1.5" PointX="12.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.AAPreAllocate" Width="1.5" PointX="12.75" PointY="95.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.aspnet_Applications" Width="1.5" PointX="7.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.aspnet_Membership" Width="1.5" PointX="9.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.aspnet_Profile" Width="1.5" PointX="12.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.aspnet_Roles" Width="1.5" PointX="0.75" PointY="125.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.aspnet_SchemaVersions" Width="1.5" PointX="11.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.aspnet_Users" Width="1.5" PointX="3" PointY="124.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.aspnet_UsersInRoles" Width="1.5" PointX="13.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.b_UOBGroupBranches" Width="1.5" PointX="14.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.BrwInitialNoteRequest" Width="1.5" PointX="12.75" PointY="135" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.CampaignEmailAlert" Width="1.5" PointX="18.75" PointY="99.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.DropdownList" Width="1.5" PointX="15" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.DropdownListCategory" Width="1.5" PointX="12.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.EmailScheduler" Width="1.5" PointX="18.75" PointY="162" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.EmailTemplate" Width="1.5" PointX="14.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.FundTransferInSlip" Width="1.5" PointX="7.5" PointY="124.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.InvestorLateInterest" Width="1.5" PointX="28.25" PointY="113.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.InvestorRepayment" Width="1.5" PointX="26" PointY="115" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.InvestorRepaymentPayment" Width="1.5" PointX="28.25" PointY="116.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.IssuerLateInterest" Width="1.5" PointX="5.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.IssuerRepayment" Width="1.5" PointX="18.75" PointY="103" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.IssuerRepaymentPayment" Width="1.5" PointX="23.25" PointY="108" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.p_ContractTemplate" Width="1.5" PointX="12" PointY="142.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.PublicHoliday" Width="1.5" PointX="15.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.Reward" Width="1.5" PointX="16.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_AACharging" Width="1.5" PointX="11.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_AccInt_ApplicationDetails" Width="1.5" PointX="13.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_AccInt_RequestFiles" Width="1.5" PointX="15.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_AccInt_RequestMaster" Width="1.5" PointX="17.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_AccInt_ServiceResponse" Width="1.5" PointX="0.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_AccInt_TokenStore" Width="1.5" PointX="2.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_AccountAdjustment" Width="1.5" PointX="26.25" PointY="108.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_AccountDetails" Width="1.5" PointX="10.5" PointY="119.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_AccountDetialsIgnoreList" Width="1.5" PointX="17.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_AdminActionLogs" Width="1.5" PointX="17.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_API_ACRA_COMPANY_REGN_DATA" Width="1.5" PointX="17.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_API_Auditors" Width="1.5" PointX="3" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_API_Bankruptcy" Width="1.5" PointX="4.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_API_BankruptcyFIling" Width="1.5" PointX="6.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_API_BusinessLitigation" Width="1.5" PointX="18.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_API_BusinessLitigationFiling" Width="1.5" PointX="8.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_API_CapitalStructure" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_API_DPRatingMaster" Width="1.5" PointX="19.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_API_Filings" Width="1.5" PointX="19.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_API_Guarantor" Width="1.5" PointX="10.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_API_IndividualLitigation" Width="1.5" PointX="19.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_API_IndividualLitigationFiling" Width="1.5" PointX="19.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_API_IssuerRegistration" Width="1.5" PointX="0.75" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_API_Representatives" Width="1.5" PointX="3" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_API_Scorto_ApplicationInfo" Width="1.5" PointX="15.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_API_Scorto_Configuration" Width="1.5" PointX="20.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_API_Scorto_CreditInfo" Width="1.5" PointX="17.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_API_Scorto_IssuerInfo" Width="1.5" PointX="19.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_API_SearchCount" Width="1.5" PointX="21.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_API_Shareholder" Width="1.5" PointX="3" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_API_ShareholderDetails" Width="1.5" PointX="5.25" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_API_WritOfSummons" Width="1.5" PointX="3" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_AuditLog" Width="1.5" PointX="0.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_AuditTrial" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_AuditTwoFAVerification" Width="1.5" PointX="7.5" PointY="118.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_Balances" Width="1.5" PointX="7.5" PointY="121.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_BanksList" Width="1.5" PointX="8.25" PointY="111.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_CampaignMinimumAmounts" Width="1.5" PointX="2.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_CampaignViewers" Width="1.5" PointX="13.5" PointY="124.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_Comments" Width="1.5" PointX="13.5" PointY="121" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_Countries" Width="1.5" PointX="14.25" PointY="110.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_DPCreditPaymentGrade" Width="1.5" PointX="22.5" PointY="135" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_ErrorLog" Width="1.5" PointX="21.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_ESignInfo" Width="1.5" PointX="18.75" PointY="123.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_Files" Width="1.5" PointX="5.25" PointY="114.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_FundTransferIN_Raw" Width="1.5" PointX="12.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_FundTransferIN_Staging" Width="1.5" PointX="7.5" PointY="131.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_FundTransferRef" Width="1.5" PointX="7.5" PointY="138.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_GlobalVariables" Width="1.5" PointX="21.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_GoToKnowSource" Width="1.5" PointX="0.75" PointY="120.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_Group" Width="1.5" PointX="19.5" PointY="137.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_GroupLoanRequests" Width="1.5" PointX="21.75" PointY="125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_GroupProduct" Width="1.5" PointX="21.75" PointY="143" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_GroupUsers" Width="1.5" PointX="7.5" PointY="128" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_Investor_Announcement_Groups" Width="1.5" PointX="24.75" PointY="138.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_Investor_Announcements" Width="1.5" PointX="22.5" PointY="146.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_InvestorReferees" Width="1.5" PointX="7.5" PointY="148.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_InvestorServicingFee" Width="1.5" PointX="21.75" PointY="139.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_InvestorServicingFeeType" Width="1.5" PointX="19.5" PointY="135.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_InvoiceFinanceProductDetails" Width="1.5" PointX="18.75" PointY="119.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_Knowledgeassessment_OptionsList" Width="1.5" PointX="15" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_Knowledgeassessment_Parentlist" Width="1.5" PointX="12.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_Knowledgeassessmentdetails_ForUser" Width="1.5" PointX="7.5" PointY="151.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_LaunchTimes" Width="1.5" PointX="21.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_Loanoffers" Width="1.5" PointX="13.5" PointY="128.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_LoanOffersLog" Width="1.5" PointX="22.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_LoanPayments" Width="1.5" PointX="21" PointY="113.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_LoanPurposesList" Width="1.5" PointX="14.25" PointY="138.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_LoanRateChangeLog" Width="1.5" PointX="21.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_loanRequestReference" Width="1.5" PointX="22.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_LoanRequests" Width="1.5" PointX="16.5" PointY="116.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_LoanRequestServiceFee" Width="1.5" PointX="21.75" PointY="122" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_LoanTransactions" Width="1.5" PointX="21.75" PointY="128.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_LogOtherLoanDocuments" Width="1.5" PointX="23.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_MoolahCore" Width="1.5" PointX="24.75" PointY="121.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_MoolahCoreVerification" Width="1.5" PointX="18.75" PointY="151.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_MoolahPeri" Width="1.5" PointX="18.75" PointY="130" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_MoolahPeriVerification" Width="1.5" PointX="18.75" PointY="147.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_MoolahPerksForLenders" Width="1.5" PointX="4.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_NatureofBusinessList" Width="1.5" PointX="8.25" PointY="108.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_NewMoolahCore" Width="1.5" PointX="27.75" PointY="121.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_NewMoolahCoreVerification" Width="1.5" PointX="18.75" PointY="172.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_OtherLoanDocuments" Width="1.5" PointX="7.5" PointY="90.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_OutStandingLitigation" Width="1.5" PointX="30" PointY="123.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_PaidLatePayments" Width="1.5" PointX="18.75" PointY="182.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_Partners" Width="1.5" PointX="8.25" PointY="104.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_PersonalGuaranteeInfo" Width="1.5" PointX="18.75" PointY="185.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_PersonalGuranteeVerification" Width="1.5" PointX="6.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_PointAudit" Width="1.5" PointX="23.75" PointY="114.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_Product" Width="1.5" PointX="14.25" PointY="141.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_ReconData" Width="1.5" PointX="8.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_ReconSummary" Width="1.5" PointX="23.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_RepaymentMessages" Width="1.5" PointX="18.75" PointY="196.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_RepaymentMessagesTemp" Width="1.5" PointX="23.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_SecurityQuestions" Width="1.5" PointX="23.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_SecurityQuestionsForUsers" Width="1.5" PointX="7.5" PointY="214.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_TenureMSFees" Width="1.5" PointX="16.5" PointY="142.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_TransactionMapping" Width="1.5" PointX="23.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_TransactionType" Width="1.5" PointX="24.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_TwoFAVerification" Width="1.5" PointX="7.5" PointY="218.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_UserGoToKnowSourceDetails" Width="1.5" PointX="3" PointY="120.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_UserPreferences" Width="1.5" PointX="7.5" PointY="221.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_Users" Width="1.5" PointX="5.25" PointY="118.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_UserVerification" Width="1.5" PointX="14.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_WatchList" Width="1.5" PointX="18.75" PointY="200.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_WithDrawAdminNotes" Width="1.5" PointX="9.75" PointY="224.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_WithDrawMoney" Width="1.5" PointX="7.5" PointY="224.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.u_Permissions" Width="1.5" PointX="3" PointY="128.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.u_Points" Width="1.5" PointX="7.5" PointY="228.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.u_PromotionCampaigns" Width="1.5" PointX="11.25" PointY="112.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.u_Referrars" Width="1.5" PointX="13.5" PointY="116.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.u_VerificationToken" Width="1.5" PointX="24.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.UserAcknowledgement" Width="1.5" PointX="7.5" PointY="235.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.UserEmployment" Width="1.5" PointX="7.5" PointY="238.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.UserEmploymentVerification" Width="1.5" PointX="9.75" PointY="239.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.UserQualification" Width="1.5" PointX="7.5" PointY="242.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.UserQualificationVerification" Width="1.5" PointX="7.5" PointY="246.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.UserRepaymentMsg" Width="1.5" PointX="21" PointY="158" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.AggregatedCounter" Width="1.5" PointX="16.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.Counter" Width="1.5" PointX="25.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.Hash" Width="1.5" PointX="0.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.Job" Width="1.5" PointX="7.75" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.JobParameter" Width="1.5" PointX="10" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.JobQueue" Width="1.5" PointX="25.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.List" Width="1.5" PointX="25.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.Schema" Width="1.5" PointX="25.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.Server" Width="1.5" PointX="25.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.Set" Width="1.5" PointX="25.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.State" Width="1.5" PointX="10" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.ActionPermission" Width="1.5" PointX="8" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.PermissionMenu" Width="1.5" PointX="5.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.RolePermissionMenu" Width="1.5" PointX="10.5" PointY="58.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.Role" Width="1.5" PointX="8.25" PointY="115" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.UsersRole" Width="1.5" PointX="10.5" PointY="116" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.b_tempUOBGroupBranches" Width="1.5" PointX="21.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.CheckInvestorRepayment" Width="1.5" PointX="23.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.IndustryType" Width="1.5" PointX="25.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_AccountDetails1" Width="1.5" PointX="2.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_API_DPOrder" Width="1.5" PointX="26.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_AuditRegisterOTPVerification" Width="1.5" PointX="27.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_Balances_3" Width="1.5" PointX="27.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_Balances1" Width="1.5" PointX="10.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_LogESignInfo" Width="1.5" PointX="24.75" PointY="132.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_Product2" Width="1.5" PointX="27.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_RegisterOTPVerification" Width="1.5" PointX="27.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_RepaymentMessages1" Width="1.5" PointX="16.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_RiskAdjustedOfReturn" Width="1.5" PointX="27.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_tempBalances" Width="1.5" PointX="18.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_tempLateIssuerRepayment" Width="1.5" PointX="27.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_tempLoanTransactions" Width="1.5" PointX="27.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tbl_UserTest" Width="1.5" PointX="4.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tempInvestorRepayment" Width="1.5" PointX="6.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.tempScheduledRepayment1" Width="1.5" PointX="28.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.u_ReferrarsTest" Width="1.5" PointX="20.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.vw_aspnet_MembershipUsers" Width="1.5" PointX="25.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.vw_aspnet_Profiles" Width="1.5" PointX="27.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.vw_aspnet_Roles" Width="1.5" PointX="29.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.vw_aspnet_Users" Width="1.5" PointX="29.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MS_DEVModel.vw_aspnet_UsersInRoles" Width="1.5" PointX="29.75" PointY="10.75" IsExpanded="true" />
+        <AssociationConnector Association="MS_DEVModel.FK_AAContractInvestments_AAContracts" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_AAContractInvestments_tbl_LoanRequests" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_AAContracts_tbl_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_AAIncompleteSignUpEmails_AAContracts" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_AAInsufficientFunds_AAContracts" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_AAPreAllocates_AAContracts" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_AAPreAllocates_tbl_LoanRequests" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_aspnet_Users_aspnet_Roles" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK__tbl_Users__Aspne__68BD7F23" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK__BrwInitia__User___3B2BBE9D" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_CampaignEmailAlerts_tbl_LoanRequests" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_DropdownList_DropdownListCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK__UserRepay__MailI__7A1D154F" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_FundTransferInSlips_tbl_Files" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_FundTransferInSlips_tbl_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_InvestorLateInterest_InvestorRepayment" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_InvestorRepayment_IssuerRepayment" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_InvestorRepayment_tbl_Loanoffers" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_InvestorRepaymentPayment_InvestorRepaymentPayment" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_InvestorRepaymentPayment_tbl_Loanoffers" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_InvestorRepaymentPayment_tbl_LoanPayments" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_IssuerRepayment_tbl_LoanRequests" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_IssuerRepaymentPayment_IssuerRepayment" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_tbl_AccountAdjustment_IssuerRepayment" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_tbl_LoanPayments_IssuerRepayment" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_IssuerRepaymentPayment_tbl_LoanPayments" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK__tbl_Produ__Contr__269AB60B" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_tbl_AccountAdjustment_tbl_LoanPayments" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_tbl_AccountDetails_tbl_BanksList" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_tbl_AccountDetails_tbl_Countries" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_tbl_AccountDetails_tbl_NatureofBusinessList" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_tbl_AccountDetails_tbl_Partners" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_tbl_AccountDetails_tbl_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_tbl_AccountDetails1_tbl_Countries1" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK__tbl_API_A__Issue__7CC477D0" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK__tbl_API_C__Issue__79E80B25" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK__tbl_API_R__Issue__770B9E7A" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK__tbl_API_S__Issue__7152C524" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK__tbl_API_W__Issue__6E765879" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK__tbl_API_S__Share__742F31CF" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_tbl_AuditTrial_tbl_AuditTrial" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK__tbl_Audit__UserI__6B99EBCE" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_tbl_Balances_tbl_Balances" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_tbl_CampaignViewers_tbl_LoanRequests" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_tbl_CampaignViewers_tbl_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_tbl_Comments_tbl_LoanRequests" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_tbl_Comments_tbl_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_tbl_LoanRequests_tbl_Countries" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_tbl_MoolahCore_tbl_DPCreditPaymentGrade" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_tbl_NewMoolahCore_tbl_DPCreditPaymentGrade" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK__tbl_ESign__FileI__04EFA97D" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK__tbl_ESign__Reque__03FB8544" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK__tbl_LogES__FileI__07CC1628" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK__tbl_Other__FileI__0B9CA70C" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_tbl_FundTransferIN_Staging_tbl_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_tbl_FundTransferRef_tbl_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_tbl_UserGoToKnowSourceDetails_tbl_GoToKnowSource" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_tbl_GroupLoanRequests_tbl_Group" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_tbl_GroupProduct_tbl_Group" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_tbl_GroupUsers_tbl_Group" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_tbl_Investor_Announcement_Groups_tbl_Group" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_tbl_GroupLoanRequests_tbl_LoanRequests" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_tbl_GroupProduct_tbl_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_tbl_GroupUsers_tbl_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_tbl_Investor_Announcement_Groups_tbl_Investor_Announcements" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_tbl_InvestorReferees_tbl_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK__tbl_Inves__Inves__438BFA74" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK__tbl_Inves__Produ__4297D63B" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK__tbl_LoanR__Inves__475C8B58" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK__tbl_Invoi__Reque__469D7149" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_tbl_Knowledgeassessment_OptionsList_tbl_Knowledgeassessment_OptionsList" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_tbl_Knowledgeassessmentdetails_ForUser_tbl_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_tbl_Loanoffers_tbl_LoanRequests" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_tbl_Loanoffers_tbl_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_tbl_LoanRequests_tbl_LoanPurposesList" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK__tbl_LoanR__Produ__5A4F643B" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK__tbl_LoanR__Reque__4668671F" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK__tbl_LogES__Reque__06D7F1EF" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK__tbl_Point__Reque__52793849" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_tbl_LoanRequestMoolahCore_tbl_LoanRequests" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_tbl_LoanRequestNewMoolahCore_tbl_LoanRequests" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_tbl_LoanRequests_tbl_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_tbl_LoanTransactions_tbl_LoanRequests" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_tbl_MoolahCoreVerification_tbl_LoanRequests" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_tbl_MoolahPeri_tbl_LoanRequests" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_tbl_MoolahPeriVerification_tbl_LoanRequests" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_tbl_NewMoolahCoreVerification_tbl_LoanRequests" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_tbl_PaidLatePayments_tbl_LoanRequests" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_tbl_PersonalGuaranteeInfo_tbl_LoanRequests" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_tbl_RepaymentMessages_tbl_LoanRequests" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_tbl_Watchlist_tbl_LoanRequests" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_tbl_LoanTransactions_tbl_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_tbl_LoanTransactions_tbl_Users1" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_tbl_LoanRequestMoolahCore_tbl_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_tbl_OutStandingLitigation_tbl_LoanRequestMoolahCore" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_tbl_MoolahPeri_tbl_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_tbl_LoanRequestNewMoolahCore_tbl_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_tbl_OutStandingLitigation_tbl_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK__tbl_Point__Refer__79E80B25" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK__tbl_Point__Refer__7ADC2F5E" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_tbl_PointAudit_u_PromotionCampaigns" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_tbl_TenureMSFees_tbl_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK__UserRepay__MsgId__7187CF4E" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_tbl_SecurityQuestionsForUsers_tbl_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK__tbl_TwoFA__UserI__7CC477D0" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_tbl_Users_tbl_UserGoToKnowSourceDetails" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_tbl_UserPreferences_tbl_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK__UserRepay__UserI__0559BDD1" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_tbl_Users_u_Referrars" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_tbl_WithDrawMoney_tbl_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_u_Points_u_Points" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_u_Referrars_u_Referrars" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_UserAcknowledgements_tbl_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_UserEmployment_tbl_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_UserQualification_tbl_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_UserQualificationVerification_tbl_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_UsersRoles_tbl_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_tbl_WithDrawAdminNotes_tbl_WithDrawMoney" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_u_Referrars_u_PromotionCampaigns" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_UserEmploymentVerification_UserEmployment" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_HangFire_JobParameter_Job" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_HangFire_State_Job" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_ActionPermissions_PermissionMenus" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_PermissionMenus_PermissionMenus" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_RolePermissionMenus_PermissionMenus" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_RolePermissionMenus_Roles" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.FK_UsersRoles_Roles" ManuallyRouted="false" />
+        <AssociationConnector Association="MS_DEVModel.u_RolePermissions" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
